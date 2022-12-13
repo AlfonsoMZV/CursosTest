@@ -1,0 +1,263 @@
+<div class="container" data-aos="fade-up">
+  <!----------------------------- PREGUNTA UNO---------------------->
+  <div *ngIf="preguntaUno == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+    <div class="col-xl-10 col-md-6">
+      <h3>
+        <label style="color: #737171;">
+          Competencia Pedagógica
+        </label>
+      </h3>
+    </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                ¿Selecciono herramientas y recursos TIC acordes a los aprendizajes esperados de planes y programas de estudio vigentes?                  
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a data-toggle="modal" data-target="#bootstrapModel" (click)="onAcceptUno()"> Si</a></h3> 
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+  </div>
+  <!----------------------------- PREGUNTA DOS---------------------->
+  <div *ngIf="preguntaDos == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+    <div class="col-xl-10 col-md-6">
+      <h3>
+        <label style="color: #737171;">
+          Competencia Pedagógica
+        </label>
+      </h3>
+    </div>
+    <div class="col-xl-10 col-md-6">
+        <div class="icon-box">
+          <h3>
+            <label style="color: #737171;">
+              ¿Identifico las problemáticas educativas en mi practica docente y las oportunidades o riesgos del uso de las TIC para atenderlas?            
+            </label>
+          </h3>
+        </div>
+      </div>
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a (click)="onAcceptDos()">Si</a></h3>
+        </div>
+      </div> 
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+        </div>
+      </div>  
+  </div>
+  <!----------------------------- PREGUNTA TRES---------------------->
+  <div *ngIf="preguntaTres == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+    <div class="col-xl-10 col-md-6">
+      <h3>
+        <label style="color: #737171;">
+          Competencia Pedagógica
+        </label>
+      </h3>
+    </div>
+    <div class="col-xl-10 col-md-6">
+        <div class="icon-box">
+          <h3>
+            <label style="color: #737171;">
+              ¿Conozco una variedad de estrategias y metodologías apoyadas por las TIC para planear y hacer seguimiento a mi labor docente?  
+            </label>
+          </h3>
+        </div>
+      </div>
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a (click)="onAcceptTres()">Si</a></h3>
+        </div>
+      </div> 
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+        </div>
+      </div>  
+  </div>
+  <!----------------------------- PREGUNTA CUATRO---------------------->
+  <div *ngIf="preguntaCuatro == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+    <div class="col-xl-10 col-md-6">
+      <h3>
+        <label style="color: #737171;">
+          Competencia Pedagógica
+        </label>
+      </h3>
+    </div>
+    <div class="col-xl-10 col-md-6">
+        <div class="icon-box">
+          <h3>
+            <label style="color: #737171;">
+              ¿Incentivo a mis estudiantes para que aprendan de forma autónoma y colaborativa, apoyados de las TIC?            
+            </label>
+          </h3>
+        </div>
+      </div>
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a (click)="onAcceptCuatro()">Si</a></h3>
+        </div>
+      </div> 
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+        </div>
+      </div>  
+  </div>
+  <!----------------------------- PREGUNTA CINCO---------------------->
+  <div *ngIf="preguntaCinco == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+    <div class="col-xl-10 col-md-6">
+      <h3>
+        <label style="color: #737171;">
+          Competencia Pedagógica
+        </label>
+      </h3>
+    </div>
+    <div class="col-xl-10 col-md-6">
+        <div class="icon-box">
+          <h3>
+            <label style="color: #737171;">
+              ¿Utilizo las TIC con mis estudiantes  para atener sus necesidades e intereses y proponer  soluciones a problemas de aprendizaje?      
+            </label>
+          </h3>
+        </div>
+      </div>
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a (click)="onAcceptCinco()">Si</a></h3>
+        </div>
+      </div> 
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+        </div>
+      </div>  
+  </div>
+  <!----------------------------- PREGUNTA SEIS---------------------->
+  <div *ngIf="preguntaSeis == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+    <div class="col-xl-10 col-md-6">
+      <h3>
+        <label style="color: #737171;">
+          Competencia Pedagógica
+        </label>
+      </h3>
+    </div>
+    <div class="col-xl-10 col-md-6">
+        <div class="icon-box">
+          <h3>
+            <label style="color: #737171;">
+              ¿Implemento estrategias didácticas mediadas por TIC para fortalecer en kis estudiantes aprendizajes que les permitan resolver problemas de la vida real?            
+            </label>
+          </h3>
+        </div>
+      </div>
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a (click)="onAcceptSeis()">Si</a></h3>
+        </div>
+      </div> 
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+        </div>
+      </div>  
+  </div>
+  <!----------------------------- PREGUNTA SIETE---------------------->
+  <div *ngIf="preguntaSiete == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+    <div class="col-xl-10 col-md-6">
+      <h3>
+        <label style="color: #737171;">
+          Competencia Pedagógica
+        </label>
+      </h3>
+    </div>
+    <div class="col-xl-10 col-md-6">
+        <div class="icon-box">
+          <h3>
+            <label style="color: #737171;">
+              ¿Diseño ambientes de aprendizaje mediados por TIC de cuerdo con el desarrollo cognitivo, físico, psicológico y social de mis estudiantes para fomentar el desarrollo de sus competencias? 
+            </label>
+          </h3>
+        </div>
+      </div>
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a (click)="onAcceptSiete()">Si</a></h3>
+        </div>
+      </div> 
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+        </div>
+      </div>  
+  </div>
+  <!----------------------------- PREGUNTA OCHO---------------------->
+  <div *ngIf="preguntaOcho == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+    <div class="col-xl-10 col-md-6">
+      <h3>
+        <label style="color: #737171;">
+          Competencia Pedagógica
+        </label>
+      </h3>
+    </div>
+    <div class="col-xl-10 col-md-6">
+        <div class="icon-box">
+          <h3>
+            <label style="color: #737171;">
+              ¿Propongo proyectos educativos mediados con TIC que permiten la reflexión sobre el aprendizaje propio y la producción de conocimiento?
+            </label>
+          </h3>
+        </div>
+      </div>
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a (click)="onAcceptOcho()">Si</a></h3>
+        </div>
+      </div> 
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+        </div>
+      </div>  
+  </div>
+  <!----------------------------- PREGUNTA NUEVE---------------------->
+  <div *ngIf="preguntaNueve == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+    <div class="col-xl-10 col-md-6">
+      <h3>
+        <label style="color: #737171;">
+          Competencia Pedagógica
+        </label>
+      </h3>
+    </div>
+    <div class="col-xl-10 col-md-6">
+        <div class="icon-box">
+          <h3>
+            <label style="color: #737171;">
+              ¿Evalúo los resultados obtenidos con la implementación de estrategias ?  
+            </label>
+          </h3>
+        </div>
+      </div>
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a routerLink="/employees" (click)="onAcceptNueve()">Si</a></h3>
+        </div>
+      </div> 
+      <div class="col-xl-1 col-md-6">
+        <div class="icon-box">
+          <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+        </div>
+      </div>  
+  </div>
+</div>

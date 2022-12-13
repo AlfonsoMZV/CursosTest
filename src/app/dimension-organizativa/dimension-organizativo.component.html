@@ -1,0 +1,264 @@
+<div class="container" data-aos="fade-up">
+    <!----------------------------- PREGUNTA UNO---------------------->
+    <div *ngIf="preguntaUno == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Organizativa
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+            <div class="icon-box">
+              <h3>
+                <label style="color: #737171;">
+                   ¿Identifico las características, usos y oportunidades  que ofrecen las herramientas tecnológicas en los procesos educativos?            
+                </label>
+              </h3>
+            </div>
+          </div>
+          <div class="col-xl-1 col-md-6">
+            <div class="icon-box">
+              <h3><a data-toggle="modal" data-target="#bootstrapModel" (click)="onAcceptUno()"> Si</a></h3> 
+            </div>
+          </div> 
+          <div class="col-xl-1 col-md-6">
+            <div class="icon-box">
+              <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+            </div>
+          </div>  
+    </div>
+    <!----------------------------- PREGUNTA DOS---------------------->
+    <div *ngIf="preguntaDos == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Organizativa
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                  ¿Elaboro actividades de aprendizaje utilizando aplicaciones, contenidos, herramientas tecnológicas y medios audiovisuales?            
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptDos()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA TRES---------------------->
+    <div *ngIf="preguntaTres == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Organizativa
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                  ¿Evalúo la calidad, pertinencia y veracidad de la información disponible en diversos medios  como portales educativos  y especializados, motores de búsqueda y material audiovisual?
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptTres()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA CUATRO---------------------->
+    <div *ngIf="preguntaCuatro == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Organizativa
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                  ¿Combino una amplia variedad de herramientas tecnológicas para mejorar la planeación e implementación de mis practicas educativas?
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptCuatro()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA CINCO---------------------->
+    <div *ngIf="preguntaCinco == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Organizativa
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                  ¿Diseño y publico contenidos digitales u objetos virtuales de aprendizaje  mediante el uso adecuado de herramientas tecnológicas?
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptCinco()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA SEIS---------------------->
+    <div *ngIf="preguntaSeis == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Organizativa
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                  ¿Analizo los riesgos y potencialidades de publicar y compartir información a través de Internet?
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptSeis()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA SIETE---------------------->
+    <div *ngIf="preguntaSiete == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Organizativa
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                  ¿Utilizo herramientas tecnológicas complejas o especializadas para diseñar ambientes virtuales de aprendizaje que favorecen  el desarrollo de competencias de mis estudiantes y/o redes de aprendizaje?  
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptSiete()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA OCHO---------------------->
+    <div *ngIf="preguntaOcho == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Organizativa
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                  ¿Utilizo herramientas tecnológicas para ayudar a mis estudiantes a construir aprendizajes significativos y desarrollar el pensamiento crítico?  
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptOcho()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA NUEVE---------------------->
+    <div *ngIf="preguntaNueve == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Organizativa
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                  ¿Aplico las normas de propiedad intelectual y licenciamiento existentes, referentes  al uso de información ajena y propia?            
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="onAcceptNueve()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+  </div>
+  

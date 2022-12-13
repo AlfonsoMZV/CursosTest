@@ -1,0 +1,265 @@
+<div class="container" data-aos="fade-up">
+    <!----------------------------- PREGUNTA UNO---------------------->
+    <div *ngIf="preguntaUno == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Socioefectiva
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+            <div class="icon-box">
+              <h3>
+                <label style="color: #737171;">
+                    ¿Me comunico adecuada y respetuosamente con estudiantes, docentes y otros miembros de la comunidad académica usando TIC para establecer contacto con ellos de manera sincrónica y asincrónica? 
+                </label>
+              </h3>
+            </div>
+          </div>
+          <div class="col-xl-1 col-md-6">
+            <div class="icon-box">
+              <h3><a data-toggle="modal" data-target="#bootstrapModel" (click)="onAcceptUno()"> Si</a></h3> 
+            </div>
+          </div> 
+          <div class="col-xl-1 col-md-6">
+            <div class="icon-box">
+              <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+            </div>
+          </div>  
+    </div>
+    <!----------------------------- PREGUNTA DOS---------------------->
+    <div *ngIf="preguntaDos == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Socioefectiva
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                  ¿Elaboro actividades de aprendizaje utilizando aplicaciones, contenidos, herramientas tecnológicas y medios audiovisuales?            
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptDos()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA TRES---------------------->
+    <div *ngIf="preguntaTres == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Socioefectiva
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                ¿Utilizo variedad de interfaces para transmitir información y expresar ideas propias combinando texto, audio, imágenes (estáticas o dinámicas), videos y gestos?
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptTres()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA CUATRO---------------------->
+    <div *ngIf="preguntaCuatro == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Socioefectiva
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                ¿Participo activamente en redes y comunidades de aprendizaje y facilito la incorporación de los estudiantes en ellas de una forma pertinente y respetuosa? 
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptCuatro()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA CINCO---------------------->
+    <div *ngIf="preguntaCinco == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Socioefectiva
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                ¿Desarrollo un diálogo multidireccional y fluido con los miembros de la comunidad académica para la ejecución y desarrollo de propuestas pedagógicas y estrategias de trabajo colaborativo?
+                
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptCinco()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA SEIS---------------------->
+    <div *ngIf="preguntaSeis == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Socioefectiva
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                ¿Promuevo en la comunidad educativa comunicaciones efectivas  que aporten al mejoramiento  de los procesos de convivencia escolar? 
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptSeis()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA SIETE---------------------->
+    <div *ngIf="preguntaSiete == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Socioefectiva
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                ¿Creo y publico materiales en plataformas de trabajo colaborativo con el fin de crear espacios virtuales de aprendizaje y reconocer el potencial educativo de las comunidades virtuales?
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptSiete()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA OCHO---------------------->
+    <div *ngIf="preguntaOcho == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Socioefectiva
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                ¿Evalúo la calidad, pertinencia y veracidad de la información disponible en medios tales como portales educativos y especializados, repositorios y motores de búsqueda? 
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a (click)="onAcceptOcho()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+    <!----------------------------- PREGUNTA NUEVE---------------------->
+    <div *ngIf="preguntaNueve == true" class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+      <div class="col-xl-10 col-md-6">
+        <h3>
+          <label style="color: #737171;">
+            Competencia Socioefectiva
+          </label>
+        </h3>
+      </div>  
+      <div class="col-xl-10 col-md-6">
+          <div class="icon-box">
+            <h3>
+              <label style="color: #737171;">
+                ¿Contribuyo con mis conocimientos y los de mis estudiantes a repositorios en Internet a través de textos y artículos científicos?
+              </label>
+            </h3>
+          </div>
+        </div>
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="onAcceptNueve()">Si</a></h3>
+          </div>
+        </div> 
+        <div class="col-xl-1 col-md-6">
+          <div class="icon-box">
+            <h3><a routerLink="/employees" (click)="finishTestResultado()"> No</a></h3> 
+          </div>
+        </div>  
+    </div>
+  </div>
+  

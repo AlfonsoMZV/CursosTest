@@ -1,0 +1,167 @@
+<div class="container" data-aos="fade-up">
+    <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-xl-5 col-md-6">
+            <div class="icon-box">
+              <h3><a routerLink="/dimension-pedagogica">Competencia
+                Pedagógica                 
+              </a></h3>
+              <h3 *ngIf="consultaUno == true">✔<a>{{consultaTipoUno}}</a></h3>
+            </div>
+          </div>
+          <div class="col-xl-5 col-md-6">
+            <div class="icon-box">
+              <h3><a routerLink="/dimension-tecnologica"> 
+                Competencia Tecnológica 
+              </a></h3>
+              <h3 *ngIf="consultaDos == true">✔<a>{{consultaTipoDos}}</a></h3>
+            </div>
+          </div><div class="col-xl-5 col-md-6">
+            <div class="icon-box">
+              <h3><a routerLink="/dimension-socioefectiva">
+                Competencia Socioafectiva 
+              </a></h3>
+              <h3 *ngIf="consultaTres == true">✔<a>{{consultaTipoTres}}</a></h3>
+            </div>
+          </div>
+          <div class="col-xl-5 col-md-6">
+            <div class="icon-box">
+              <h3><a routerLink="/dimension-organizativa" >Competencia Organizativa
+              </a></h3>
+              <h3 *ngIf="consultaCuatro == true">✔<a>{{consultaTipoCuatro}}</a></h3>
+            </div>
+          </div>
+    </div>
+  </div>
+  <div *ngIf="resultado == true" class="center" style="display: block; width: 800px; height: 800px; ">
+       <table  > 
+            <tr> 
+              <td>
+                <canvas baseChart class="chart"
+                  [data]="radarChartData"
+                  [options]="radarChartOptions"
+                  [type]="radarChartType"
+                  style="width: 700px; height: 700px;"
+                >
+                </canvas>
+              </td>
+              <td>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="competencias">
+                    <th mat-header-cell *matHeaderCellDef> Competencias </th>
+                    <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+                  </ng-container>
+                
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="momentos">
+                    <th mat-header-cell *matHeaderCellDef> Momentos </th>
+                    <td mat-cell *matCellDef="let element"> {{element.resultado}} </td>
+                  </ng-container>
+          
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <br>
+                <br>
+                <button name="btn1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#cursosModal">
+                  Cursos recomendados
+                </button>
+              </td> 
+            </tr>  
+          </table>
+  </div>
+  <div class="modal fade modal-dialog-scrollable" id="cursosModal" tabindex="-1" role="dialog" aria-labelledby="cursosModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 80%;"  role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cursos Recomendados</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>
+            <thead>
+                <tr>
+                    <td>Competencias</td>
+                    <td>Explorador</td>
+                    <td>Integrador</td>
+                    <td>Innovador</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pedagógica</td>
+                    <td>
+                      <a *ngIf="pedagExpl == true" href="https://credomex.edomex.gob.mx/informacion_ciencias" class="link-secondary" target="_blank" >Diplomado Enseñanza de las Matemáticas para la Educación Futura</a><p></p>
+                      <a *ngIf="pedagExpl == true" href="https://guiadeldocente.mx/curso-nuevas-metodologias-para-revolucionar-el-aula-constancia-al-finalizar-gratuito/" class="link-secondary" target="_blank" >Curso Nuevas metodologías para revolucionar el aula</a><p></p>
+                      <a *ngIf="pedagExpl == true" href="https://365sep-my.sharepoint.com/personal/formacion_continua_nube_sep_gob_mx/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fformacion%5Fcontinua%5Fnube%5Fsep%5Fgob%5Fmx%2FDocuments%2FWeb%2FCursos%2F2021%2FOaxaca%2FMetodolog%C3%ADas%20activas&ga=1" class="link-secondary" target="_blank" >Curso Metodologías Activas</a>
+                    </td>
+                    <td>
+                      <a *ngIf="pedagInte == true" href="https://pruebat.org/Aprende/CatCursos/contenidoCurso/13256" class="link-secondary" target="_blank" >Curso Herramientas Digitales para la Docencia</a><p></p>
+                      <a *ngIf="pedagInte == true" href="https://snte.org.mx/curso-ensenanza-y-aprendizaje-digital/" class="link-secondary" target="_blank" >Curso Enseñanza y Aprendizaje en la Era Digital</a>
+                    </td>
+                    <td>
+                      <a *ngIf="pedagInno == true" href="https://guiadeldocente.mx/curso-introduccion-a-la-gamificacion-para-docentes-constancia-al-finalizar-gratuito/" class="link-secondary" target="_blank" >Curso Introducción a la Gamificación para Docentes</a><p></p>
+                      <a *ngIf="pedagInno == true" href="https://pruebat.org/Aprende/CatCursos/contenidoCurso/103" class="link-secondary" target="_blank" >Curso Enseña con STEM</a><p></p>
+                      <a *ngIf="pedagInno == true" href="https://pruebat.org/Aprende/CatCursos/contenidoCurso/10" class="link-secondary" target="_blank" >Curso Aprendizaje basado en reto</a><p></p>
+                      <a *ngIf="pedagInno == true" href="https://pruebat.org/Aprende/CatCursos/contenidoCurso/9" class="link-secondary" target="_blank" >Curso Aula Invertida</a><p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tecnológico</td>
+                    <td>
+                      <a *ngIf="tecnoExpl == true" href="https://mexicox.gob.mx/courses/course-v1:UV+SDPD22021X+2022_02/about" class="link-secondary" target="_blank" >Curso Saberes Digitales para los Docentes nivel 1</a><p></p>
+                      <a *ngIf="tecnoExpl == true" href="https://e.huawei.com/en/talent/news/#/details?consultationId=1677" class="link-secondary" target="_blank" >Curso de Habilidades Digitales. Huawei</a>
+                    </td>
+                    <td>
+                      <a *ngIf="tecnoInte == true" href="https://mexicox.gob.mx/courses/course-v1:UV+SDPD22024X+2022_02/about" class="link-secondary" target="_blank" >Curso Saberes Digitales para los Docentes nivel 2</a><p></p>
+                      <a *ngIf="tecnoInte == true" href="https://pruebat.org/Diplomado/InfoDiplomado/contenidoDiplomado/23877" class="link-secondary" target="_blank" >Diplomado en Habilidades Digitales para la Docencia</a>
+                    </td>
+                    <td>
+                      <a *ngIf="tecnoInno == true" href="https://pruebat.org/Aprende/CatCursos/contenidoCurso/524/" class="link-secondary" target="_blank" >Curso Atrévete a crear una app</a><p></p>
+                      <a *ngIf="tecnoInno == true" href="https://pruebat.org/Aprende/CatCursos/contenidoCurso/15" class="link-secondary" target="_blank" >Curso Crea con Dispositivos Móviles</a><p></p>
+                      <a *ngIf="tecnoInno == true" href="https://pruebat.org/Aprende/CatCursos/contenidoCurso/233" class="link-secondary" target="_blank" >Curso Atrévete a crear un Podcast</a><p></p>
+                      <a *ngIf="tecnoInno == true" href="https://pruebat.org/Aprende/CatCursos/contenidoCurso/78" class="link-secondary" target="_blank" >Curso Atrévete a crear un Blog</a><p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Socioefectiva</td>
+                    <td>
+                      <a *ngIf="socioExpl == true" href="https://uveg.edu.mx/index.php/es/comunicacion-efectiva" class="link-secondary" target="_blank" >Curso Comunicación Efectiva</a><p></p>
+                      <a *ngIf="socioExpl == true" href="https://snte.org.mx/curso-educacion-socioemocional/" class="link-secondary" target="_blank" >Curso Educación Socioemociona</a>
+                    </td>
+                    <td>
+                      <a *ngIf="socioInte == true" href="https://cursos3.cndh.org.mx/course/view.php?id=9" class="link-secondary" target="_blank" >Curso Convivencia Escolar desde la Perspectiva de Derechos Humanos</a><p></p>
+                      <a *ngIf="socioInte == true" href="https://cursos3.cndh.org.mx/course/view.php?id=50" class="link-secondary" target="_blank" >Curso Derechos Humanos y Competencias Socioemocionales</a><p></p>
+                      <a *ngIf="socioInte == true" href="https://cursos3.cndh.org.mx/course/view.php?id=53" class="link-secondary" target="_blank" >Diplomado Educación para la Paz y Derechos Humanos</a><p></p>
+                      <a *ngIf="socioInte == true" href="https://365sep-my.sharepoint.com/:w:/g/personal/formacion_continua_nube_sep_gob_mx/ERd5UTlQrUNAla-f5YOcWJoBPTL7-tNfg5fGXRf5D3UNjQ?e=gLSA4g" class="link-secondary" target="_blank" >Curso Autogestivo Hacia un buen trato en la Escuela. Enfoque de Derechos Humanos</a><p></p>
+                    </td>
+                    <td>
+                      <a *ngIf="socioInno == true" href="https://convivenciaescolar.edugem.gob.mx/" class="link-secondary" target="_blank" >Diplomado en Mediación Escolar</a><p></p>
+                      <a *ngIf="socioInno == true" href="https://guiadeldocente.mx/curso-gestion-de-riesgos-y-apoyo-socioemocional-en-la-escuela-constancia-al-finalizar-gratuito/" class="link-secondary" target="_blank" >Curso Gestión de Riesgos y Apoyo Socioemocional en la Escuela</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Organizativa</td>
+                    <td>
+                      <a *ngIf="organExpl == true" href="https://www.aulafacil.com/cursos/pedagogia/tecnicas-de-comunicacion-t1133" class="link-secondary" target="_blank" >Curso gratis de Técnicas de Comunicación</a><p></p>
+                    </td>
+                    <td>
+                      <a *ngIf="organInte == true" href="https://snte.org.mx/curso-trabajo-colaborativo/" class="link-secondary" target="_blank" >Curso Trabajo Colaborativo entre Docentes y Directivos</a><p></p>
+                      <a *ngIf="organInte == true" href="https://www.aulafacil.com/cursos/pedagogia/organizacion-escolar-t5192" class="link-secondary" target="_blank" >Curso gratis de Organización Escola</a>
+                    </td>
+                    <td>
+                      <a *ngIf="organInno == true" href="https://uveg.edu.mx/index.php/es/gestion-estrategica-organizacional" class="link-secondary" target="_blank" >Curso Gestión Estratégica Organizacional</a><p></p>
+                      <a *ngIf="organInno == true" href="https://uveg.edu.mx/index.php/es/comunicacion-y-redes" class="link-secondary" target="_blank" >Curso Comunicación y Redes</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+         </div>
+      </div>
+    </div>
+  </div>
